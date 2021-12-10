@@ -15,8 +15,8 @@ NMT with Bidirectional LSTM has lowest loss during 20 epochs          |  NMT wit
 
  ### How to run:
 ```
-git clone https://github.com/mshadloo/Neural-Machine-Translation-with-Attention.git
-cd Neural-Machine-Translation-with-Attention
+git clone https://github.com/znawfar/NMT-with-Attention.git
+cd NMT-with-Attention
 chmod +x data.sh && ./data.sh
 chmod +x run.sh && ./run.sh
 ```
