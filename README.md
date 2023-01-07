@@ -1,14 +1,14 @@
-I have implemented encoder-decoder based seq2seq models with attention. The first aim for this implementation is to work towards computational grounded theory and thematic analysis using NLP and deep learning. Hence here is the first step.
+> I have implemented encoder-decoder based seq2seq models with attention. The first aim for this implementation is to work towards computational grounded theory and thematic analysis using NLP and deep learning. Hence here is the first step.
 
-The encoder can be a Bidirectional LSTM, a simple LSTM or a GRU, and the decoder can be an LSTM, or a GRU. I have a argument for encoder type (RNN model used in encoder); it can be 'bidirectional', 'lstm' or 'gru'. When this argument is set to 'bidirectional', the model has Bidirectional LSTM as the enocder a simple LSTM as the decoder. When it is set to 'lstm', the encoder and decoder are both simple LSTMs, and for the 'gru' value, they are both GRUs. Thus, I can have different three models. 
+>The encoder can be a Bidirectional LSTM, a simple LSTM or a GRU, and the decoder can be an LSTM, or a GRU. I have a argument for encoder type (RNN model used in encoder); it can be 'bidirectional', 'lstm' or 'gru'. When this argument is set to 'bidirectional', the model has Bidirectional LSTM as the enocder a simple LSTM as the decoder. When it is set to 'lstm', the encoder and decoder are both simple LSTMs, and for the 'gru' value, they are both GRUs. Thus, I can have different three models. 
 
-To translate a sentence from a language to another one, a human translator reads the sentence part by part, and generates part of translation. A neural machine translation with attention like a human translator looks at the sentence part by part. To generate each part of translation, the attention mechanism tells a Neural Machine Translation model where it should pay attention to. A simple encoder-decoder model without the attention mechanism tends to forget the earlier part of the sequence once they process further. With the attention mechanism, the model can deal with long sequences. 
+>To translate a sentence from a language to another one, a human translator reads the sentence part by part, and generates part of translation. A neural machine translation with attention like a human translator looks at the sentence part by part. To generate each part of translation, the attention mechanism tells a Neural Machine Translation model where it should pay attention to. A simple encoder-decoder model without the attention mechanism tends to forget the earlier part of the sequence once they process further. With the attention mechanism, the model can deal with long sequences. 
 
 
 ## Dataset
-To evaluate the models, I use English-French dataset provided by [http://www.manythings.org/anki/](http://www.manythings.org/anki/)
+>To evaluate the models, I use English-French dataset provided by [http://www.manythings.org/anki/](http://www.manythings.org/anki/)
 ## Experiment
-I computed accuracy and loss on both training and validation set on all of these three models and compared the resutls. The experiments show that the model with a Bidirectional LSTM as the encoder outperforms the rest.
+>I computed accuracy and loss on both training and validation set on all of these three models and compared the resutls. The experiments show that the model with a Bidirectional LSTM as the encoder outperforms the rest.
 
 NMT with Bidirectional LSTM has lowest loss during 20 epochs          |  NMT with Bidirectional LSTM has highest accuracy during 20 epochs 
 :-------------------------:|:-------------------------:
@@ -24,10 +24,10 @@ chmod +x run.sh && ./run.sh
 ```
 # Steps
 ### Data Preprocessing
-First of all, like any other NLP task, we load the text data and perform pre-processing and also do a train-test split.
+>First of all, like any other NLP task, we load the text data and perform pre-processing and also do a train-test split.
 
 
-The data needs some cleaning before being used to train our neural translation model.
+>The data needs some cleaning before being used to train our neural translation model.
 1. Normalizing case to lowercase.
 2. Removing punctuation from each word.
 3. Removing non-printable characters.
@@ -40,7 +40,7 @@ The data needs some cleaning before being used to train our neural translation m
 10. Convert each sentence to its feature vector
 
 ### Define The Model
-I implement encoder-decoder based seq2seq models with attention. The encoder and the decoder are pre-attention and post-attention RNNs on both sides of the attention mechanism.
+>I implement encoder-decoder based seq2seq models with attention. The encoder and the decoder are pre-attention and post-attention RNNs on both sides of the attention mechanism.
 * Encoder:a RNN (Bidirectional LSTM, LSTM, GRU)
   * The encoder goes through 𝑇𝑥 time steps (𝑇𝑥: maximum length of the input sequence). 
 * Decoder: a RNN (LSTM, GRU)
