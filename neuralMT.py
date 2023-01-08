@@ -255,5 +255,3 @@ class NMT_Model:
         self.train_model.save(train_file)
         self.inference_model.save(infer_file)
 
-
-
