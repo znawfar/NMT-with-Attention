@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 for rnn_model in bidirectional
