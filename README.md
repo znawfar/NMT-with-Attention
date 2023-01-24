@@ -1,4 +1,7 @@
 
+
+## NMT-with-Attention
+
 > I have implemented encoder-decoder based seq2seq models with attention. The first aim for this implementation is to work towards computational grounded theory and thematic analysis using NLP and deep learning. Hence here is the first step.
 
 >The encoder can be a Bidirectional LSTM, a simple LSTM or a GRU, and the decoder can be an LSTM, or a GRU. I have a argument for encoder type (RNN model used in encoder); it can be 'bidirectional', 'lstm' or 'gru'. When this argument is set to 'bidirectional', the model has Bidirectional LSTM as the enocder a simple LSTM as the decoder. When it is set to 'lstm', the encoder and decoder are both simple LSTMs, and for the 'gru' value, they are both GRUs. Thus, I can have different three models. 
@@ -16,6 +19,8 @@ NMT with Bidirectional LSTM has lowest loss during 20 epochs          |  NMT wit
 ![](/images/loss.png)  |  ![](/images/accuracy.png)
 
 
+ 
+ 
  ### How to run:
 ```
 git clone https://github.com/znawfar/NMT-with-Attention.git
@@ -48,3 +53,5 @@ chmod +x run.sh && ./run.sh
    * The decoder goes through 𝑇𝑦 time steps (𝑇𝑦: maximum length of the output sequence). 
 * The attention mechanism computes the context variable  𝑐𝑜𝑛𝑡𝑒𝑥𝑡⟨𝑡⟩  for each timestep in the output ( 𝑡=1,…,𝑇𝑦 ).
 
+
+----------------------------------------------------------
