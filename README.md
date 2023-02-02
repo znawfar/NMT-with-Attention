@@ -1,6 +1,6 @@
 
 
-## NMT-with-Attention
+## NMT with Attention
 
 > I have implemented encoder-decoder based seq2seq models with attention. The first aim for this implementation is to work towards computational grounded theory and thematic analysis using NLP and deep learning. Hence here is the first step.
 
